@@ -5,7 +5,6 @@ import lombok.SneakyThrows;
 import lombok.extern.slf4j.Slf4j;
 
 import java.util.*;
-import java.util.stream.Collectors;
 
 @Slf4j
 public class Day1 {
@@ -16,7 +15,7 @@ public class Day1 {
     }
 
     public static void partOne() {
-        final List<Integer> measures = getMeasures();
+        final List<Integer> measures = ResourceForDay.getInputAsListOfInt(1);
         int timeIncreased = 0;
         for (int i = 0; i < measures.size(); i++) {
             if (i > 0 && measures.get(i - 1) < measures.get(i)) {
@@ -27,7 +26,7 @@ public class Day1 {
     }
 
     public static void partTwo() {
-        final List<Integer> measures = getMeasures();
+        final List<Integer> measures = ResourceForDay.getInputAsListOfInt(1);
         int timeIncreased = 0;
         int rollingWindow = 0;
 
@@ -47,13 +46,5 @@ public class Day1 {
             rollingWindow = nextWindow;
         }
         log.info("Part 2: Number of time the measures increased: " + timeIncreased);
-    }
-
-    private static List<Integer> getMeasures() {
-        final String input = ResourceForDay.getInput(1);
-        return Arrays
-                .stream(input.split(System.lineSeparator()))
-                .map(Integer::parseInt)
-                .collect(Collectors.toList());
     }
 }
