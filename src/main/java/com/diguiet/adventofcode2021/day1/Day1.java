@@ -8,6 +8,8 @@ import java.util.*;
 
 @Slf4j
 public class Day1 {
+    private static final int DAY = 1;
+
     @SneakyThrows
     public static void main(String[] args) {
         partOne();
@@ -15,7 +17,7 @@ public class Day1 {
     }
 
     public static void partOne() {
-        final List<Integer> measures = ResourceForDay.getInputAsListOfInt(1);
+        final List<Integer> measures = ResourceForDay.getInputAsListOfInt(DAY);
         int timeIncreased = 0;
         for (int i = 0; i < measures.size(); i++) {
             if (i > 0 && measures.get(i - 1) < measures.get(i)) {
@@ -26,7 +28,7 @@ public class Day1 {
     }
 
     public static void partTwo() {
-        final List<Integer> measures = ResourceForDay.getInputAsListOfInt(1);
+        final List<Integer> measures = ResourceForDay.getInputAsListOfInt(DAY);
         int timeIncreased = 0;
         int rollingWindow = 0;
 

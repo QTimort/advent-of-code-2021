@@ -8,6 +8,8 @@ import java.util.List;
 
 @Slf4j
 public class Day2 {
+    private static final int DAY = 2;
+
     @SneakyThrows
     public static void main(String[] args) {
         partOne();
@@ -15,7 +17,7 @@ public class Day2 {
     }
 
     public static void partOne() {
-        final List<String> instructions = ResourceForDay.getInputAsList(2);
+        final List<String> instructions = ResourceForDay.getInputAsList(DAY);
         int hori = 0;
         int depth = 0;
         for (final String instruction : instructions) {
@@ -35,7 +37,7 @@ public class Day2 {
     }
 
     public static void partTwo() {
-        final List<String> instructions = ResourceForDay.getInputAsList(2);
+        final List<String> instructions = ResourceForDay.getInputAsList(DAY);
         int hori = 0;
         int depth = 0;
         int aim = 0;
