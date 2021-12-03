@@ -1,4 +1,4 @@
-package com.diguiet.adventofcode2021.dayX;
+package com.diguiet.adventofcode2021.day3;
 
 import com.diguiet.adventofcode2021.utils.ResourceForDay;
 import lombok.SneakyThrows;
@@ -7,8 +7,8 @@ import lombok.extern.slf4j.Slf4j;
 import java.util.List;
 
 @Slf4j
-public class DayX {
-    private static final int DAY = -1;
+public class Day3 {
+    private static final int DAY = 3;
 
     @SneakyThrows
     public static void main(String[] args) {
