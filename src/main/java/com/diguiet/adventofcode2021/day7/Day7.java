@@ -8,7 +8,7 @@ import java.util.List;
 
 @Slf4j
 public class Day7 {
-    private static final int DAY = -1;
+    private static final int DAY = 7;
 
     @SneakyThrows
     public static void main(String[] args) {
